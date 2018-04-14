@@ -50,6 +50,8 @@ class FeaturedViewController: UIViewController {
     }
 }
 
+
+// Implementa el protocolo definido en FeaturedPresenter
 extension FeaturedViewController: FeaturedView {
 	func setTitle(_ title: String) {
 		self.title = title

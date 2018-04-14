@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		49F0C091208204EF00E0B6DE /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F0C090208204EF00E0B6DE /* AppAssembly.swift */; };
+		49F0C0942082136500E0B6DE /* DetailNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F0C0932082136500E0B6DE /* DetailNavigator.swift */; };
+		49F0C096208214AF00E0B6DE /* PushDetailNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F0C095208214AF00E0B6DE /* PushDetailNavigator.swift */; };
+		49F0C09820823F4800E0B6DE /* FeaturedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F0C09720823F4800E0B6DE /* FeaturedPresenterTests.swift */; };
+		49F0C09A2082427200E0B6DE /* DetailNavigatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F0C0992082427200E0B6DE /* DetailNavigatorMock.swift */; };
+		49F0C09C2082484F00E0B6DE /* FeatureViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F0C09B2082484F00E0B6DE /* FeatureViewMock.swift */; };
 		9901C1042080A10B00714957 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9901C1012080A10B00714957 /* Kingfisher.framework */; };
 		9901C1052080A10B00714957 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9901C1022080A10B00714957 /* RxCocoa.framework */; };
 		9901C1062080A10B00714957 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9901C1032080A10B00714957 /* RxSwift.framework */; };
@@ -140,6 +145,11 @@
 
 /* Begin PBXFileReference section */
 		49F0C090208204EF00E0B6DE /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		49F0C0932082136500E0B6DE /* DetailNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNavigator.swift; sourceTree = "<group>"; };
+		49F0C095208214AF00E0B6DE /* PushDetailNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushDetailNavigator.swift; sourceTree = "<group>"; };
+		49F0C09720823F4800E0B6DE /* FeaturedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPresenterTests.swift; sourceTree = "<group>"; };
+		49F0C0992082427200E0B6DE /* DetailNavigatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNavigatorMock.swift; sourceTree = "<group>"; };
+		49F0C09B2082484F00E0B6DE /* FeatureViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureViewMock.swift; sourceTree = "<group>"; };
 		9901C1012080A10B00714957 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		9901C1022080A10B00714957 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		9901C1032080A10B00714957 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -249,6 +259,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49F0C0922082133B00E0B6DE /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				49F0C0932082136500E0B6DE /* DetailNavigator.swift */,
+				49F0C095208214AF00E0B6DE /* PushDetailNavigator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		9901C1002080A10B00714957 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +331,7 @@
 				993D566B2080E10F00FB9F85 /* DI */,
 				993D56662080DE1F00FB9F85 /* Domain */,
 				993D56492080DD2100FB9F85 /* Presentation */,
+				49F0C0922082133B00E0B6DE /* Navigation */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -411,6 +431,9 @@
 			children = (
 				99506B2D20809F2200F94098 /* TMDbCoreTests.swift */,
 				99506B2F20809F2200F94098 /* Info.plist */,
+				49F0C09720823F4800E0B6DE /* FeaturedPresenterTests.swift */,
+				49F0C0992082427200E0B6DE /* DetailNavigatorMock.swift */,
+				49F0C09B2082484F00E0B6DE /* FeatureViewMock.swift */,
 			);
 			path = TMDbCoreTests;
 			sourceTree = "<group>";
@@ -731,6 +754,7 @@
 				99B8DA832080D3CE00D07287 /* Movie.swift in Sources */,
 				99B8DA7B2080D34100D07287 /* SearchResultCell.swift in Sources */,
 				99B8DA7D2080D35B00D07287 /* SearchViewController.swift in Sources */,
+				49F0C096208214AF00E0B6DE /* PushDetailNavigator.swift in Sources */,
 				99B8DA822080D3CE00D07287 /* Show.swift in Sources */,
 				993D56592080DDFA00FB9F85 /* PosterStripCell.swift in Sources */,
 				9901C11E2080ABA300714957 /* WebService.swift in Sources */,
@@ -752,6 +776,7 @@
 				99B9E7282080C177001DD8C8 /* SearchAssembly.swift in Sources */,
 				993D56652080DDFA00FB9F85 /* DetailViewController.swift in Sources */,
 				99B8DA942080D80400D07287 /* FeaturedAssembly.swift in Sources */,
+				49F0C0942082136500E0B6DE /* DetailNavigator.swift in Sources */,
 				99B9E7142080BE4C001DD8C8 /* NibLoadableView.swift in Sources */,
 				993D56612080DDFA00FB9F85 /* PosterStripView.swift in Sources */,
 				9901C1212080AC9100714957 /* DateFormatter+Utils.swift in Sources */,
@@ -772,6 +797,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F0C09820823F4800E0B6DE /* FeaturedPresenterTests.swift in Sources */,
+				49F0C09C2082484F00E0B6DE /* FeatureViewMock.swift in Sources */,
+				49F0C09A2082427200E0B6DE /* DetailNavigatorMock.swift in Sources */,
 				99506B2E20809F2200F94098 /* TMDbCoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

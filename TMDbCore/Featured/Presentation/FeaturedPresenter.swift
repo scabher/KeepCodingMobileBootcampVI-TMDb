@@ -8,6 +8,8 @@
 
 import RxSwift
 
+// Para evitar que dependa de UIKit
+// Se utiliza un protocolo para definir cómo se actualiza la vista
 protocol FeaturedView: class {
 	func setShowsHeaderTitle(_ title: String)
 	func setMoviesHeaderTitle(_ title: String)
@@ -17,8 +19,13 @@ protocol FeaturedView: class {
 }
 
 final class FeaturedPresenter {
-	weak var view: FeaturedView?
+	weak var view: FeaturedView?    // Para que no hayan referencias circulares
+    let detailNavigator: DetailNavigator
 
+    init(detailNavigator: DetailNavigator) {
+        self.detailNavigator = detailNavigator
+    }
+    
 	func didLoad() {
 		view?.setShowsHeaderTitle(NSLocalizedString("ON TV", comment: ""))
 		view?.setMoviesHeaderTitle(NSLocalizedString("IN THEATERS", comment: ""))
@@ -27,11 +34,11 @@ final class FeaturedPresenter {
 	}
 
 	func didSelect(show: Show) {
-		// TODO: implement
+        detailNavigator.navigateToShow(withIdentifier: show.identifier)
 	}
 
 	func didSelect(movie: Movie) {
-		// TODO: implement
+		detailNavigator.navigateToMovie(withIdentifier: movie.identifier)
 	}
 }
 
