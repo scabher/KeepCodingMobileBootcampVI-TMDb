@@ -13,6 +13,12 @@ final class SearchPresenter {
 
 	/// The search query
 	let query = Variable("")
+    
+    private let detailNavigator: DetailNavigator
+    
+    init(detailNavigator: DetailNavigator) {
+        self.detailNavigator = detailNavigator
+    }
 
 	/// The search results
 	private(set) lazy var searchResults: Observable<[SearchResult]> = Observable
@@ -26,6 +32,14 @@ final class SearchPresenter {
 
 	/// Called by the view when the user selects a search result
 	func didSelect(searchResult: SearchResult) {
-		// TODO: implement
+        switch searchResult {
+            
+        case .movie(let movie):
+            detailNavigator.navigateToShow(withIdentifier: movie.identifier)
+        case .show(let show):
+            detailNavigator.navigateToMovie(withIdentifier: show.identifier)
+        case .person(let person):
+            print("[Excercise] Navigate to person with identifier \(person.identifier)")
+        }
 	}
 }

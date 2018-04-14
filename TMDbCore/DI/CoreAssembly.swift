@@ -8,15 +8,15 @@
 
 import UIKit
 
-
-
 final public class CoreAssembly {
     // private(set) Indica que el setter es privado
     private(set) lazy var detailAssembly = DetailAssembly(navigationController: navigationController,
                                                           imageLoadingAssembly: imageLoadingAssembly)
     public private(set) lazy var featuredAssembly = FeaturedAssembly(detailAssembly: detailAssembly,
-                                                                     imageLoadingAssembly: imageLoadingAssembly)
-	private(set) lazy var searchAssembly = SearchAssembly(imageLoadingAssembly: imageLoadingAssembly)
+                                                                     imageLoadingAssembly: imageLoadingAssembly,
+                                                                     searchAssembly: searchAssembly)
+    private(set) lazy var searchAssembly = SearchAssembly(imageLoadingAssembly: imageLoadingAssembly,
+                                                          detailAssembly: detailAssembly)
 	private(set) lazy var imageLoadingAssembly = ImageLoadingAssembly(webServiceAssembly: webServiceAssembly)
 	private(set) lazy var webServiceAssembly = WebServiceAssembly()
 
