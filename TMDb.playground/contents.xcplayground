@@ -7,5 +7,8 @@
         <page name='Card Presentation'/>
         <page name='Featured Presentation'/>
         <page name='Fake Detail Presentation'/>
+        <page name='ReactiveX'/>
+        <page name='ReactiveX HTTP'/>
+        <page name='ReactiveX Cocoa'/>
     </pages>
 </playground>

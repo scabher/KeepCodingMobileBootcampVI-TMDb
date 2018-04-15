@@ -24,9 +24,9 @@ final internal class ImageRepository: ImageRepositoryProtocol {
 
 	init(webService: WebService, imageManager: ImageManager) {
 		self.baseURL = webService.load(Configuration.self, from: .configuration)
-			.catchErrorJustReturn(.default)
+			.catchErrorJustReturn(.default) // Análogo a try/catch
 			.map { $0.images.baseURL }
-			.share(replay: 1, scope: .forever)
+			.share(replay: 1, scope: .forever)  // Aplicable a cualquier secuencia de eventos
 		self.imageManager = imageManager
 	}
 
